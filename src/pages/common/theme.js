@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+const Theme = createTheme({
     palette: {
         primary: {
             main: '#24a8d8', // Màu primary của bạn
@@ -12,4 +12,4 @@ const theme = createTheme({
     },
 });
 
-export default theme;
+export default Theme;
