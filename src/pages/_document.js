@@ -1,11 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import ResponsiveAppBar from './common/ResponsiveAppBar'
 import { Container, ThemeProvider } from '@mui/material'
-import theme from './common/theme'
+import Theme from './common/theme'
 
 export default function Document() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <Html lang="en">
         <Head><ResponsiveAppBar /></Head>
         <body style={{ margin: 0 }}>

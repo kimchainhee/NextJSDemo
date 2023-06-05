@@ -1,3 +1,4 @@
+'use client'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, Grid, TextField, Button, Box } from "@mui/material";
 import Link from "next/link";
 import React, { useState, useEffect } from "react"
@@ -11,6 +12,7 @@ const rows = [
   { name: 'Anh2', email: 'anh2@gmail.com', phone: '654564654' },
   { name: 'Anh3', email: 'anh3@gmail.com', phone: '987987987' },
 ];
+
 
 export default function ListUser() {
   const [data, setData] = useState([]);

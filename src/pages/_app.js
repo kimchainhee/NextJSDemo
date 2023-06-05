@@ -1,10 +1,12 @@
 // import '@/styles/globals.css'
 import { ThemeProvider } from '@mui/material'
-import theme from './common/theme'
+import Theme from './common/theme'
+
 
 export default function App({ Component, pageProps }) {
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <Component {...pageProps} />
     </ThemeProvider>
   )
