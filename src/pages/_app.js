@@ -1,4 +1,5 @@
 // import '@/styles/globals.css'
+'use client'
 import { ThemeProvider, } from '@mui/material'
 import useTheme from './common/theme';
 
