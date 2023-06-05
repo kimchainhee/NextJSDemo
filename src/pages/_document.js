@@ -1,4 +1,3 @@
-'use client'
 import { Html, Head, Main, NextScript } from 'next/document'
 import ResponsiveAppBar from './common/ResponsiveAppBar'
 import { Container, ThemeProvider, createTheme } from '@mui/material'

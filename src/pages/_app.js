@@ -1,5 +1,4 @@
 // import '@/styles/globals.css'
-'use client'
 import { ThemeProvider, createTheme, } from '@mui/material'
 
 export default function App({ Component, pageProps }) {
