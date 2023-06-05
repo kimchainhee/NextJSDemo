@@ -1,11 +1,22 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import ResponsiveAppBar from './common/ResponsiveAppBar'
-import { Container, ThemeProvider } from '@mui/material'
-import Theme from './common/theme'
+import { Container, ThemeProvider, createTheme } from '@mui/material'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#24a8d8', // Màu primary của bạn
+      contrastText: '#fff',
+    },
+  },
+  typography: {
+    fontFamily: 'Arial, sans-serif', // Font family của bạn
+  },
+});
 
 export default function Document() {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={theme}>
       <Html lang="en">
         <Head><ResponsiveAppBar /></Head>
         <body style={{ margin: 0 }}>
