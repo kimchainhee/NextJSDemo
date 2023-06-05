@@ -1,19 +1,10 @@
 // import '@/styles/globals.css'
-import { ThemeProvider, createTheme } from '@mui/material'
+import { ThemeProvider, } from '@mui/material'
+import useTheme from './common/theme';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#24a8d8', // Màu primary của bạn
-      contrastText: '#fff',
-    },
-  },
-  typography: {
-    fontFamily: 'Arial, sans-serif', // Font family của bạn
-  },
-});
 
 export default function App({ Component, pageProps }) {
+  const theme = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
