@@ -2,7 +2,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import ResponsiveAppBar from './common/ResponsiveAppBar'
 import { Container, ThemeProvider } from '@mui/material'
-import useTheme from './common/theme';
+import useTheme from './common/useTheme';
 
 export default function Document() {
   const theme = useTheme();
