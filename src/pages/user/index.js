@@ -128,7 +128,7 @@ export default function ListUser() {
                           variant='body2'
                           color='primary'
                           component={Link}
-                          href={`/user/id:${row.id}`}
+                          href={`/user/id:${row.name}`}
                           sx={{
                             cursor: 'pointer',
                             textDecoration: 'none',

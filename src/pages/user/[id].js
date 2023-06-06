@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function UserDetail() {
   const router = useRouter();
-  const { id, calories } = router.query;
+  const { id } = router.query;
   return (
     <Grid container spacing={2}>
       <Grid item xs>
         <Typography variant='h6' paragraph>
-          <b>UserDetail {id} {calories}</b>
+          <b>UserDetail {id}</b>
         </Typography>
       </Grid>
       <Grid item>
