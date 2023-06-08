@@ -1,5 +1,6 @@
 // import '@/styles/globals.css'
-import { ThemeProvider, createTheme, } from '@mui/material'
+import { Container, ThemeProvider, createTheme, } from '@mui/material'
+import ResponsiveAppBar from './common/ResponsiveAppBar';
 
 export default function App({ Component, pageProps }) {
   const theme = createTheme({
@@ -16,7 +17,10 @@ export default function App({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <ResponsiveAppBar />
+      <Container maxWidth="xl" sx={{ p: 2 }}>
+        <Component {...pageProps} />
+      </Container>
     </ThemeProvider>
   )
 }

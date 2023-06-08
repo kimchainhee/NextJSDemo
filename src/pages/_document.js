@@ -1,6 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import ResponsiveAppBar from './common/ResponsiveAppBar'
-import { Container, ThemeProvider, createTheme } from '@mui/material'
+import { ThemeProvider, createTheme } from '@mui/material'
 
 export default function Document() {
   const theme = createTheme({
@@ -18,12 +17,10 @@ export default function Document() {
   return (
     <ThemeProvider theme={theme}>
       <Html lang="en">
-        <Head><ResponsiveAppBar /></Head>
+        <Head />
         <body style={{ margin: 0 }}>
-          <Container maxWidth="xl" sx={{ p: 2 }}>
-            <Main />
-            <NextScript />
-          </Container>
+          <Main />
+          <NextScript />
         </body>
       </Html>
     </ThemeProvider>
