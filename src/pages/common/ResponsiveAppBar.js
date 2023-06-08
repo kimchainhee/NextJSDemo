@@ -15,6 +15,7 @@ import Link from 'next/link'
 const pages = [
   { title: 'home', href: '' },
   { title: 'user', href: 'user' },
+  { title: 'game', href: 'game' },
   { title: 'about', href: 'about' },
 ];
 
