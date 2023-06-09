@@ -179,7 +179,6 @@ function useGameState() {
 function Tile({ index, pos, onClick, src }) {
   const [top, setTop] = useState('')
   const [left, setLeft] = useState('')
-  // const left = typeof window !== 'undefined' && pos[1] * 100 + 5;
   const bgLeft = (index % 4) * 100 + 5;
   const bgTop = Math.floor(index / 4) * 100 + 5;
 
