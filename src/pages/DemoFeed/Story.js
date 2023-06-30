@@ -39,20 +39,23 @@ export default function Story() {
   return (
     <Box paddingY={2} marginTop={2}>
       <Grid container spacing={2}>
-        {demoStory.map((story, index) => (
-          <Grid item key={index}>
-            <Box>
-              {story}
-            </Box>
-            <b />
-            <Typography
-              variant="caption"
-              sx={{ mt: 2 }}
-            >
-              userName
-            </Typography>
-          </Grid>
-        ))}
+        {demoStory.map((story, index) => {
+          const key = index;
+          return (
+            <Grid item key={key}>
+              <Box>
+                {story}
+              </Box>
+              <b />
+              <Typography
+                variant="caption"
+                sx={{ mt: 2 }}
+              >
+                userName
+              </Typography>
+            </Grid>
+          )
+        })}
       </Grid>
     </Box>
   );

@@ -1,4 +1,5 @@
-import { ThemeProvider, createTheme, } from '@mui/material'
+import { Grid, ThemeProvider, createTheme, } from '@mui/material'
+import MenuLeft from '../common/MenuLeft';
 
 export default function App({ Component, pageProps }) {
   const theme = createTheme({
