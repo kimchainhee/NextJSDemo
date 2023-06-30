@@ -1,10 +1,8 @@
 import React from 'react'
-import { Typography } from '@mui/material'
+import Login from './login';
 
 export default function Home() {
   return (
-    <Typography variant='h6' paragraph>
-      <b>Home</b>
-    </Typography>
+    <Login />
   );
 }

@@ -1,26 +1,22 @@
 // import '@/styles/globals.css'
-import { Container, ThemeProvider, createTheme, } from '@mui/material'
-import ResponsiveAppBar from './common/ResponsiveAppBar';
+import { ThemeProvider, createTheme, } from '@mui/material'
 
 export default function App({ Component, pageProps }) {
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#24a8d8', // Màu primary của bạn
+        main: '#24a8d8', // Màu primary
         contrastText: '#fff',
       },
     },
     typography: {
-      fontFamily: 'Arial, sans-serif', // Font family của bạn
+      fontFamily: 'Arial, sans-serif', // Font family
     },
   });
 
   return (
     <ThemeProvider theme={theme}>
-      <ResponsiveAppBar />
-      <Container maxWidth="xl" sx={{ p: 2 }}>
-        <Component {...pageProps} />
-      </Container>
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 }

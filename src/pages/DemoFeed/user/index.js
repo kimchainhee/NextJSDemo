@@ -30,7 +30,7 @@ export default function ListUser() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    setData(getRows());
+    setData(getRows(30));
   }, []);
 
   const [inputName, setInputName] = useState('');

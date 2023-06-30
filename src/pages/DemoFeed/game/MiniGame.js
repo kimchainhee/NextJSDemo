@@ -1,9 +1,12 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import { useFiles } from '../api/useFiles';
+import { useFiles } from '../../api/useFiles';
+import Image from 'next/image';
+import miniGamePhoto from '../../image/miniGamePhoto.png';
 
 const IMAGE = "https://media.hahalolo.com/2023/04/21/09/04/b229a2e095cea60f416bcc8852de1af4-1682067856_1080xauto_high.jpg.webp";
+const MINIGAMEPHOTO = miniGamePhoto;
 
 const NUM_ROWS = 4;
 const NUM_COLS = 4;
@@ -218,11 +221,17 @@ export default function MiniGame() {
   return (
     <Grid container spacing={2} justifyContent='center'>
       <Grid item xs='auto'>
-        <img
+        {/* <img
           alt='mini-game'
           width={400}
           height={500}
           src={fileInfos?.src || IMAGE}
+        /> */}
+        <Image
+          alt='mini-game'
+          width={400}
+          height={500}
+          src={fileInfos?.src || MINIGAMEPHOTO}
         />
         <input
           ref={inputFileRef}
