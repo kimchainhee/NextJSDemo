@@ -1,5 +1,6 @@
 // import '@/styles/globals.css'
 import { ThemeProvider, createTheme, } from '@mui/material'
+import MenuLeft from './common/MenuLeft';
 
 export default function App({ Component, pageProps }) {
   const theme = createTheme({
@@ -14,9 +15,10 @@ export default function App({ Component, pageProps }) {
     },
   });
 
+  const menuLeft = <MenuLeft defaultTitle />;
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <Component {...pageProps} menuLeft={MenuLeft} />
     </ThemeProvider>
   )
 }

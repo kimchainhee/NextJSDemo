@@ -9,12 +9,12 @@ const IMAGE = "https://media.hahalolo.com/2023/04/21/09/04/b229a2e095cea60f416bc
 const AvatarPerson = ({ size }) => (
   <Avatar
     alt="avatar"
-    sx={{ width: size ? size : 60, height: size ? size : 60 }}
+    sx={{ width: size ? size : 55, height: size ? size : 55 }}
   >
     <Image
       alt="avatar"
-      width={size ? size : 60}
-      height={size ? size : 60}
+      width={size ? size : 55}
+      height={size ? size : 55}
       src={IMAGE}
     />
   </Avatar>
@@ -41,7 +41,14 @@ export default function Story() {
       <Grid container spacing={2}>
         {demoStory.map(story => (
           <Grid item key={story.id}>
-            <Box>
+            <Box
+              sx={theme => ({
+                // backgroundColor: 'red',
+                borderRadius: 99,
+                border: `1px solid #f09433`,
+                padding: theme.spacing(0.25),
+              })}
+            >
               {story.content}
             </Box>
             <b />

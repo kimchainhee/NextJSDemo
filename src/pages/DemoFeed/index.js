@@ -2,37 +2,24 @@ import React from 'react';
 import { Grid } from '@mui/material'
 import Story from './Story';
 import Post from './Post';
-import MenuLeft from '../common/MenuLeft';
+import InfoRight from './InfoRight';
 
-export default function DemoFeed() {
+export default function DemoFeed(props) {
   return (
-    <Grid container>
-      <Grid item xs={2}
-        sx={theme => ({
-          position: 'fixed',
-          width: 350,
-          borderRight: `1px solid ${theme.palette.divider}`,
-        })}
-      >
-        <MenuLeft />
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        sx={theme => ({
-          height: '100%',
-          padding: theme.spacing(2),
-        })}
-      >
-        <Grid container justifyContent="center" spacing={4}>
-          <Grid item>
-            <Story />
-            <Post />
-            <Post />
-            <Post />
-          </Grid>
+    <>
+      <props.menuLeft defaultTitle="Home" />
+      <Grid container justifyContent="center" spacing={6} sx={{ ml: 6 }}>
+        <Grid item>
+          <Story />
+          <Post />
+          <Post />
+          <Post />
+        </Grid>
+        <Grid item>
+          <InfoRight />
         </Grid>
       </Grid>
-    </Grid>
+    </>
+
   );
 }
